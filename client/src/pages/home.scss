@@ -1,0 +1,82 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    animation: backgroundSlideShow 10s infinite;
+    background-size: 100vw 100vh;
+    @keyframes backgroundSlideShow {
+        0% {
+            background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/B04B/production/_118713154_gettyimages-897291236.jpg");
+        }
+        25% {
+            background-image: url("https://finbold.com/app/uploads/2022/07/Crypto-trading-expert-hints-%E2%80%98potential-area-for-longs-on-Bitcoin-is-approaching-1024x682.jpg");
+        }
+        50% {
+            background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/final_0_1200x768.jpeg?mLDvNZN81kdjNwHwcWq0eLETeoQwuTnu&size=770:433");
+        }
+        75% {
+            background-image: url("https://finbold.com/app/uploads/2022/07/Crypto-trading-expert-hints-%E2%80%98potential-area-for-longs-on-Bitcoin-is-approaching-1024x682.jpg");
+        }
+        100% {
+            background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/final_0_1200x768.jpeg?mLDvNZN81kdjNwHwcWq0eLETeoQwuTnu&size=770:433");
+        }
+    }
+    .header {
+        display: flex;
+        height: 18vh;
+        width: 100vw;
+        .title {
+            width: 60vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 500%;
+            font-weight: bold;
+            font-style: oblique;
+            color: #cc5333;
+        }
+        .buttonSection {
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .login_button {
+                width: 10vw;
+                margin: 15px;
+                height: 10vh;
+                border-radius: 15px;
+                font-size: x-large;
+                font-weight: bold;
+                font-style: italic;
+                background-color: aquamarine;
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+            .signup_button {
+                width: 10vw;
+                margin: 15px;
+                height: 10vh;
+                border-radius: 15px;
+                font-size: x-large;
+                font-weight: bold;
+                font-style: italic;
+                background-color: orange;
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+    .body {
+        height: 82vh;
+        width: 100vw;
+        font-size: 400%;
+        font-weight: bold;
+        font-style: oblique;
+        color: #cc5333;
+        display: flex;
+        justify-content: left;
+    }
+}
