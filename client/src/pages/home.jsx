@@ -23,7 +23,8 @@ export default function Home() {
         </div>
       </div>
       <div className="body">
-        {/* <p>Please login/sign up to continue</p> */}
+        <div className="parPart">WE CONVERT FOR YOUR COMFORT</div>
+        <div className="aniPart"></div>
       </div>
     </div>
   );

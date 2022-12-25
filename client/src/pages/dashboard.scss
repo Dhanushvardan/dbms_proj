@@ -4,14 +4,43 @@
     height: 100vh;
     flex-direction: column;
     .inputSection {
-        height: 20vh;
+        height: 40vh;
         width: 100vw;
-        background-color: #24243e;
+        background-color: #85d8ce;
+        .navBar {
+            .logoImg {
+                height: 11vh;
+                width: 9vw;
+                margin-top: 2vh;
+                margin-left: 2vw;
+                border-radius: 50%;
+                margin-right: 2vw;
+            }
+            display: flex;
+            justify-content: left;
+            height: 15vh;
+            width: 100vw;
+            background-color: #4389a2;
+            .navButton {
+                height: 10vh;
+                width: 10vw;
+                border-radius: 15px;
+                margin-top: 2vh;
+                margin-left: 4vw;
+                font-size: large;
+                font-style: bold;
+                background-color: orange;
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 2px 2px white;
+                }
+            }
+        }
         .dashboardInputs {
             margin-top: 3vh;
-            margin-right: 10vw;
+            margin-right: 8vw;
             height: 10vh;
-            width: 40vh;
+            width: 30vh;
             background-color: #302b63;
             color: white;
             font-size: xx-large;
@@ -19,10 +48,10 @@
             font-style: italic;
         }
         .apiButton {
-            height: 10vh;
-            width: 30vh;
+            height: 8vh;
+            width: 10vw;
             background-color: orange;
-            font-size: xx-large;
+            font-size: large;
             &:hover {
                 transform: scale(1.1);
                 box-shadow: 0 0 2px 2px white;
@@ -33,7 +62,7 @@
         display: flex;
         height: 20vh;
         width: 100vw;
-        background-color: #24243e;
+        background-color: #85d8ce;
         align-items: center;
         justify-content: space-between;
         .ops {
@@ -50,9 +79,9 @@
     }
     .outputs1 {
         display: flex;
-        height: 60vh;
+        height: 40vh;
         width: 100vw;
-        background-color: #24243e;
+        background-color: #85d8ce;
         justify-content: space-between;
         .ops1 {
             margin-left: 1vw;

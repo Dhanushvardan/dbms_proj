@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background-color: #24243e;
+    background-color: #00B4DB;
     animation: loadTransition 0.75s;
     @keyframes loadTransition {
         from {
@@ -23,20 +23,27 @@
         flex-direction: column;
         height: 50vh;
         width: 30vw;
+        border-radius: 25px;
+        border: solid 3px black;
         justify-content: center;
         align-items: center;
-        background-color: #302b63;
+        background-color: #0083B0;
         .input_username {
             padding: 5px;
             margin-bottom: 10px;
             border-radius: 15px;
             height: 4vh;
             width: 20vw;
+            text-align: center;
+            font-size: large;
         }
         .buttonLogin {
             height: 6vh;
             width: 15vw;
             border-radius: 15px;
+            &:hover {
+                transform: scale(1.15);
+            }
         }
         .loginImg {
             height: 15vh;

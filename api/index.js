@@ -16,10 +16,25 @@ app.post("/input", (req, res) => {
         console.log('Value Added Successfully!');
     })
 });
+app.post("/inputVisData", (req, res) => {
+    const q = "insert into visData(currency, denomination, days, data) VALUES(?)";
 
 
+    const input = [req.body.currency, req.body.den, req.body.days, req.body.data1];
+    db.query(q, [input], (err, data) => {
+        if (err) return res.json(err);
+        res.status(200).json('data added');
+        console.log('data added!');
+    });
+});
+app.post("/createvisData", (req, res) => {
+    const q = "CREATE TABLE visData(currency varchar(100),denomination varchar(100),days integer(10),data varchar(100))";
+    db.query(q, (err, data) => {
+        if (err) return res.json(err);
+        res.status(200).json('table created');
 
-
+    })
+});
 app.post("/createtable", (req, res) => {
     const q = "CREATE TABLE users(email varchar(100), username varchar(50), password varchar(100))";
     db.query(q, (err, data) => {
@@ -28,7 +43,6 @@ app.post("/createtable", (req, res) => {
         console.log('Table Created Successfully!');
     });
 });
-
 app.post("/signup", async(req, res) => {
     try {
         const salt = bcrypt.genSaltSync(10);
@@ -66,15 +80,9 @@ app.post("/login", async(req, res) => {
     }
 });
 
-// app.post("/addData", (req, res) => {
-//     const q = "insert into test values('pranaav')";
-//     db.query(q, (err, data) => {
-//         if (err) return res.json(err);
-//         res.status(200).json(data);
-//         console.log('data added');
-//     });
-// });
-
+setInterval(() => {
+    db.query("select 1");
+}, 10000);
 
 app.listen(3001, (req, res) => {
     console.log("Server started on PORT 3001...");

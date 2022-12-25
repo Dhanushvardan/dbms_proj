@@ -3,28 +3,32 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    animation: backgroundSlideShow 10s infinite;
-    background-size: 100vw 100vh;
-    @keyframes backgroundSlideShow {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    @keyframes SlideShow {
         0% {
-            background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/B04B/production/_118713154_gettyimages-897291236.jpg");
+            background-color: #ff9966;
         }
-        25% {
-            background-image: url("https://finbold.com/app/uploads/2022/07/Crypto-trading-expert-hints-%E2%80%98potential-area-for-longs-on-Bitcoin-is-approaching-1024x682.jpg");
+        20% {
+            background-color: #F2C94C;
         }
-        50% {
-            background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/final_0_1200x768.jpeg?mLDvNZN81kdjNwHwcWq0eLETeoQwuTnu&size=770:433");
+        40% {
+            background-color: #4ECDC4;
         }
-        75% {
-            background-image: url("https://finbold.com/app/uploads/2022/07/Crypto-trading-expert-hints-%E2%80%98potential-area-for-longs-on-Bitcoin-is-approaching-1024x682.jpg");
+        60% {
+            background-color: #FD746C;
+        }
+        80% {
+            background-color: #F15F79;
         }
         100% {
-            background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/final_0_1200x768.jpeg?mLDvNZN81kdjNwHwcWq0eLETeoQwuTnu&size=770:433");
+            background-color: #ff9966;
         }
     }
+    animation: SlideShow 10s infinite;
     .header {
         display: flex;
-        height: 18vh;
+        height: 15vh;
         width: 100vw;
         .title {
             width: 60vw;
@@ -32,9 +36,11 @@
             align-items: center;
             justify-content: center;
             font-size: 500%;
+            margin-top: 5vh;
             font-weight: bold;
             font-style: oblique;
-            color: #cc5333;
+            font-family: "Audiowide", sans-serif;
+            color: #302b63;
         }
         .buttonSection {
             width: 40vw;
@@ -43,8 +49,8 @@
             align-items: center;
             .login_button {
                 width: 10vw;
-                margin: 15px;
-                height: 10vh;
+                margin-top: 5vh;
+                height: 8vh;
                 border-radius: 15px;
                 font-size: x-large;
                 font-weight: bold;
@@ -56,8 +62,9 @@
             }
             .signup_button {
                 width: 10vw;
-                margin: 15px;
-                height: 10vh;
+                margin-top: 5vh;
+                margin-left: 2vw;
+                height: 8vh;
                 border-radius: 15px;
                 font-size: x-large;
                 font-weight: bold;
@@ -70,13 +77,45 @@
         }
     }
     .body {
-        height: 82vh;
+        height: 85vh;
         width: 100vw;
-        font-size: 400%;
-        font-weight: bold;
-        font-style: oblique;
-        color: #cc5333;
         display: flex;
-        justify-content: left;
+        .parPart {
+            width: 40vw;
+            height: 82vh;
+            margin-top: 20vh;
+            font-size: 500%;
+            font-family: "Trirong", serif;
+        }
+        .aniPart {
+            @keyframes backgroundSlideShow {
+                0% {
+                    background-image: url("https://thumbs.dreamstime.com/b/image-bitcoin-black-background-bitcoin-107991145.jpg");
+                }
+                25% {
+                    background-image: url("https://ambcrypto.com/wp-content/uploads/2022/10/po-75-1000x600.png");
+                }
+                50% {
+                    background-image: url("https://securecdn.pymnts.com/wp-content/uploads/2021/10/Tether-cryptocurrency-regulatory-scrutiny.jpg");
+                }
+                75% {
+                    background-image: url("https://ambcrypto.com/wp-content/uploads/2022/10/po-75-1000x600.png");
+                }
+                100% {
+                    background-image: url("https://thumbs.dreamstime.com/b/image-bitcoin-black-background-bitcoin-107991145.jpg");
+                }
+            }
+            animation: backgroundSlideShow 10s infinite alternate;
+            height: 72vh;
+            width: 50vw;
+            margin-top:10vh;
+            margin-left:8vw;
+            margin-bottom:10vh;
+            font-size: 400%;
+            font-weight: bold;
+            font-style: oblique;
+            color: #cc5333;
+            display: flex;
+        }
     }
 }
